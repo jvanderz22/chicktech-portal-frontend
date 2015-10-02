@@ -1,0 +1,29 @@
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <div class="panel-title">Upcoming Projects</div>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <th>Title</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Coordinator</th>
+      <th>Volunteers Needed</th>
+    </thead>
+    <tbody>
+      {{#each projects as |project|}}
+        <tr>
+          <td>
+            {{#link-to 'volunteer'}}
+              {{project.title}}
+            {{/link-to}}
+          </td>
+          <td>{{project.startDate}}</td>
+          <td>{{project.endDate}}</td>
+          <td>{{project.projectCoordinator}}</td>
+          <td>{{project.volunteersNeeded}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
