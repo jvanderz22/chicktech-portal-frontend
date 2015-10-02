@@ -3,7 +3,7 @@ function jsonResponse(json, status = 200) {
 }
 
 export default new Pretender(function(){
-  this.get('api/events', function(){
+  this.get('/events', function(){
     return jsonResponse(eventsJson());
   });
 });
@@ -34,5 +34,5 @@ function eventsJson(){
         }
       }
     ]
-  }
+  };
 }
