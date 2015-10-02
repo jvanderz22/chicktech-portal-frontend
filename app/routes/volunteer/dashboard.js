@@ -7,5 +7,13 @@ export default Ember.Route.extend({
     eventsPromise.then(json => {
       controller.set('events', json);
     });
+    var announcementsPromise = this.get('store').findAll('announcement');
+    announcementsPromise.then(json => {
+      controller.set('announcements', json)
+    });
+    var projectsPromise = this.get('store').findAll('project');
+    projectsPromise.then(json => {
+      controller.set('projects', json);
+    });
   }
 });
