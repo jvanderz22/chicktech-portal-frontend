@@ -1,16 +1,3 @@
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <div class="panel-title">Upcoming Events</div>
-  </div>
-  <ul class="list-group">
-    {{#each events as |event|}}
-      {{#link-to 'volunteer' classNames='list-group-item' activeClass=''}}
-        <h4 class="list-group-item-heading">{{event.title}}</h4>
-        <div class="list-group-item-text">
-          <span><em>{{event.date}}</em></span>
-          <span>{{event.description}}</span>
-        </div>
-      {{/link-to}}
-    {{/each}}
-  </ul>
+<div class="event-list">
+  {{event-list events=events}}
 </div>
