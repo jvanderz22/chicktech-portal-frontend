@@ -9,9 +9,10 @@ Router.map(function() {
   this.route('volunteer', function() {
     this.route('dashboard');
     this.route('events', function() {
-      this.route('event', { path: ':event_id' });
     });
   });
+
+  this.route('event', { path: 'events/:event_id' });
   this.route('projects');
   this.route('project', { path: 'projects/:project_id' });
 });
