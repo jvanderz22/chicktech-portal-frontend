@@ -38,5 +38,9 @@
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.3",
     "pretender": "0.10.0"
+  },
+  "dependencies": {
+    "broccoli-uglify-sourcemap": "^1.0.1",
+    "matcher-collection": "^1.0.0"
   }
 }
