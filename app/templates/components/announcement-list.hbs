@@ -1,0 +1,21 @@
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <div class="panel-title">Announcements</div>
+  </div>
+  <ul class="list-group">
+    {{#each announcements as |announcement|}}
+      <div class='list-group-item'>
+        <h4 class="list-group-item-heading">{{announcement.title}}</h4>
+        <div class="list-group-item-text">
+          <span><em>{{announcement.date}}</em></span>
+          <span>{{announcement.text}}</span>
+          {{#if announcement.project}}
+            <div>
+              See project #{{announcement.project.id}} for more info
+            </div>
+          {{/if}}
+        </div>
+      </div>
+    {{/each}}
+  </ul>
+</div>

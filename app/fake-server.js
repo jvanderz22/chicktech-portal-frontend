@@ -12,6 +12,11 @@ export default new Pretender(function(){
   this.get('/projects', function(){
     return jsonResponse(projectsJson());
   });
+  this.get('/projects/:id', function(req){
+    var json = projectsJson();
+    var project = json.data.findBy('id', req.params.id);
+    return jsonResponse({data: project});
+  });
 });
 
 function eventsJson(){
