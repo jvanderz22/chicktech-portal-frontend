@@ -12,6 +12,8 @@ Router.map(function() {
       this.route('event', { path: ':event_id' });
     });
   });
+  this.route('projects');
+  this.route('project', { path: 'projects/:project_id' });
 });
 
 export default Router;
