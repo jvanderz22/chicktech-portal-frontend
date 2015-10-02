@@ -8,6 +8,9 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('volunteer', function() {
     this.route('dashboard');
+    this.route('events', function() {
+      this.route('event', { path: ':event_id' });
+    });
   });
 });
 

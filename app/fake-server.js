@@ -6,8 +6,18 @@ export default new Pretender(function(){
   this.get('/announcements', function(){
     return jsonResponse(announcementsJson());
   });
+  this.get('/announcements/:id', function(req){
+    var json = annoucementsJson();
+    var announcement = json.data.findBy('id', req.params.id);
+    return jsonResponse({data: announcement});
+  });
   this.get('/events', function(){
     return jsonResponse(eventsJson());
+  });
+  this.get('/events/:id', function(req){
+    var json = eventsJson();
+    var event = json.data.findBy('id', req.params.id);
+    return jsonResponse({data: event});
   });
   this.get('/projects', function(){
     return jsonResponse(projectsJson());
