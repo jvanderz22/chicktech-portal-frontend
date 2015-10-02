@@ -2,7 +2,7 @@ import Ember from 'ember';
 import { module, test } from 'qunit';
 import startApp from 'chicktech-portal-frontend/tests/helpers/start-app';
 
-module('Acceptance | volunteer', {
+module('Acceptance | application', {
   beforeEach: function() {
     this.application = startApp();
   },
@@ -12,10 +12,10 @@ module('Acceptance | volunteer', {
   }
 });
 
-test('visiting /volunteer redirects to dashboard', function(assert) {
-  visit('/volunteer');
+test('visiting / redirects to dashboard', function(assert) {
+  visit('/');
 
   andThen(function() {
-    assert.equal(currentURL(), '/volunteer/dashboard');
+    assert.equal(currentURL(), '/dashboard');
   });
 });
