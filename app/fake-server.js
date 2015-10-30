@@ -7,7 +7,7 @@ export default new Pretender(function(){
     return jsonResponse(announcementsJson());
   });
   this.get('/announcements/:id', function(req){
-    var json = annoucementsJson();
+    var json = announcementsJson();
     var announcement = json.data.findBy('id', req.params.id);
     return jsonResponse({data: announcement});
   });
@@ -26,6 +26,17 @@ export default new Pretender(function(){
     var json = projectsJson();
     var project = json.data.findBy('id', req.params.id);
     return jsonResponse({data: project});
+  });
+  this.get('/users/:id', function(req){
+    var json = usersJson();
+    var user = json.data.findBy('id', req.params.id);
+    return jsonResponse({data: user});
+  });
+  this.post("/sessions", function(){
+    return jsonResponse(sessionJson());
+  });
+  this.get("/sessions", function(){
+    return jsonResponse(sessionJson());
   });
 });
 
@@ -112,6 +123,97 @@ function announcementsJson(){
         "attributes": {
           "title": "Welcome new volunteers!",
           "text": "Please welcome all of our new volunteers - we're so excited to have them join us!"
+        }
+      }
+    ]
+  };
+}
+
+function sessionJson(){
+  return {
+    data: {
+      "type": "sessions",
+      "id": "abc123",
+      "attributes": {
+        "token": "abc123"
+      },
+      "relationships": {
+        "user":  {
+          "type": "users",
+          "id": "1"
+        }
+      }
+    }
+  };
+}
+
+function usersJson(){
+  return {
+    data: [
+      {
+        "id": "1",
+        "type": "user",
+        "attributes": {
+          "first_name": "Jordan",
+          "last_name": "VanderZwaag",
+          "roles": ["volunteer"],
+          "bio": "Hi! I'm a software engineer with Enova.",
+          "phone_number": "612-123-1231",
+          "email": "abc@123.com"
+        },
+        "links": {
+          "self": "/users/1"
+        }
+      }
+    ]
+  };
+}
+
+function volunteerObligationJson(){
+  return {
+    data: [
+      {
+        "id": "1",
+        "type": "volunteer_obligation",
+        "attributes": {
+          "start_time": "08/07/2015",
+          "end_time": "11/03/2015"
+        },
+        "relationships": {
+          "project": {
+            "data": {
+              "type": "project",
+              "id": 2
+            }
+          },
+          "user": {
+            "data": {
+              "type": "user",
+              "id": 1
+            }
+          }
+        }
+      },
+      {
+        "id": "2",
+        "type": "volunteer_obligation",
+        "attributes": {
+          "start_time": "11/03/2015",
+          "end_time": "11/03/2015"
+        },
+        "relationships": {
+          "event": {
+            "data": {
+              "type": "event",
+              "id": 1
+            }
+          },
+          "user": {
+            "data": {
+              "type": "user",
+              "id": 1
+            }
+          }
         }
       }
     ]
