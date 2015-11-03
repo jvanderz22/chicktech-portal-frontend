@@ -8,6 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('login');
   this.route('dashboard');
+  this.route('events');
   this.route('event', { path: 'events/:event_id' });
   this.route('projects');
   this.route('project', { path: 'projects/:project_id' });
