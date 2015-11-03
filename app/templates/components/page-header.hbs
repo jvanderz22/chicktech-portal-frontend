@@ -1,15 +1,7 @@
 <div id="web-header-wrapper">
-  <h1 id="web-title"> ChickTech Portal </h1>
+  {{web-header}}
 </div>
 
 <div id="mobile-header-wrapper">
-  <span>
-    {{fa-icon icon="bars" click=(action 'expand')}}
-    <span id="mobile-title"> ChickTech Portal </span>
-  </span>
-  {{#if expanded}}
-    <div class="mobile-sidebar">
-      erqweeqw
-    </div>
-  {{/if}}
+  {{mobile-header}}
 </div>

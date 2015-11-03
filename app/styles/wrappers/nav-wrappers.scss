@@ -6,15 +6,17 @@
   }
 }
 
+#header-wrapper {
+  margin-bottom: 30px;
+}
+
 #sidebar-wrapper {
   z-index: 1000;
   position: fixed;
   left: 250px;
   width: 250px;
-  height: 100%;
   margin-left: -250px;
-  overflow-y: auto;
-  background: #000;
+  height: 100%;
 
   @media(max-width:768px) {
     display: none;
@@ -39,10 +41,9 @@
 }
 
 #mobile-header-wrapper {
-  height: 100px;
+  height: 75px;
   width: 100%;
   z-index: 1000;
-  background: #000;
 
   @media(min-width:768px) {
     display: none;
