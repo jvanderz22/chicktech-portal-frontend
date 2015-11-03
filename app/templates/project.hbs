@@ -1,18 +1,38 @@
-<div>
-  <span>Title:</span>
-  <span>{{title}}</span>
-</div>
+<section class="data">
+  <span class="data-label">Title:</span>
+  <span class="data-value">{{model.title}}</span>
+</section>
 
-<div>
-  <span>Description: {{model.description}}</span>
-</div>
+<section class="data">
+  <span class="data-label">Description:</span>
+  <span class="data-value">{{model.description}}</span>
+</section>
 
-<div>
-  <span>Start date:</span>
-  <span>{{startDate}}</span>
-</div>
+<section class="data">
+  <span class="data-label">Start Date:</span>
+  <span class="data-value">{{model.startDate}}</span>
+</section>
 
-<div>
-  <span>End date:</span>
-  <span>{{endDate}}</span>
-</div>
+<section class="data">
+  <span class="data-label">End Date:</span>
+  <span class="data-value">{{model.endDate}}</span>
+</section>
+
+<section class="data">
+  <span class="data-label">Volunteers Needed:</span>
+  <span class="data-value">{{model.volunteersNeeded}}</span>
+</section>
+
+<section class="action-buttons">
+  <button {{action "volunteer"}} class="btn btn-warning">
+    Volunteer
+  </button>
+</section>
+
+<section class="current-volunteers">
+  <div class="data-label">
+    Volunteer List
+  </div>
+
+  {{volunteer-list volunteers=model.volunteers}}
+</section>

@@ -1,14 +1,24 @@
-<div>
-  <span>Title:</span>
-  <span>{{model.title}}</span>
-</div>
+<section class="data">
+  <span class="data-label">Title:</span>
+  <span class="data-value">{{model.title}}</span>
+</section>
 
-<div>
-  <span>Date:</span>
-  <span>{{model.date}}</span>
-</div>
+<section class="data">
+  <span class="data-label">Date:</span>
+  <span class="data-value">{{model.date}}</span>
+</section>
 
-<div>
-  <span>Description:</span>
-  <span>{{model.description}}</span>
-</div>
+<section class="data">
+  <span class="data-label">Description:</span>
+  <span class="data-value">{{model.description}}</span>
+</section>
+
+<section class="action-buttons">
+  <button {{action "rsvp"}} class="btn btn-primary">
+    RSVP
+  </button>
+
+  <button {{action "volunteer"}} class="btn btn-warning">
+    Voluteer
+  </button>
+</section>

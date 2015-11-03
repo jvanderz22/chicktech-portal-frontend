@@ -7,5 +7,7 @@ export default DS.Model.extend({
   startDate:            DS.attr(),
   title:                DS.attr(),
   volunteersNeeded:     DS.attr(),
-  volunteersRegistered: DS.attr()
+  volunteersRegistered: DS.attr(),
+
+  volunteers:           DS.hasMany('user')
 });

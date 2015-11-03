@@ -79,6 +79,17 @@ function projectsJson(){
           "title": "New Project",
           "volunteers_needed": 9,
           "volunteers_registered": 3
+        },
+        "links": {
+          "self": "projects/1"
+        },
+        "relationships": {
+          "volunteers": {
+            "data": [
+              { "type": "user", "id": 1 },
+              { "type": "user", "id": 2 }
+            ]
+          }
         }
       },
       {
@@ -92,6 +103,16 @@ function projectsJson(){
           "title": "High School Mentorship",
           "volunteers_needed": 23,
           "volunteers_registered": 22
+        },
+        "links": {
+          "self": "/projects/2"
+        },
+        "relationships": {
+          "volunteers": {
+            "data": [
+              { "type": "user", "id": "2" }
+            ]
+          }
         }
       }
     ]
@@ -164,6 +185,22 @@ function usersJson(){
         },
         "links": {
           "self": "/users/1"
+        }
+      },
+      {
+        "id": "2",
+        "type": "user",
+        "attributes": {
+          "bio": "Hi! I'm a software engineer no longer with Enova.",
+          "email": "gef@123.com",
+          "first_name": "Katie",
+          "last_name": "Schilling",
+          "location": "Chicago",
+          "phone_number": "611-123-1231",
+          "role": "volunteer"
+        },
+        "links": {
+          "self": "/users/2"
         }
       }
     ]
