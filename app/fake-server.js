@@ -181,7 +181,7 @@ function usersJson(){
           "last_name": "VanderZwaag",
           "location": "Chicago",
           "phone_number": "612-123-1231",
-          "role": "volunteer"
+          "role": "admin"
         },
         "links": {
           "self": "/users/1"

@@ -4,6 +4,14 @@
   {{/link-to}}
 </li>
 
+{{#if user.content.isAdmin}}
+  <li>
+    {{#link-to 'admin'}}
+      Admin
+    {{/link-to}}
+  </li>
+{{/if}}
+
 <li>
   {{#link-to 'dashboard'}}
     Dashboard
