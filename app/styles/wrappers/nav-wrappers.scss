@@ -1,0 +1,50 @@
+#wrapper {
+  padding-left: 0;
+
+  @media(min-width:768px) {
+    padding-left: 250px;
+  }
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 250px;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #000;
+
+  @media(max-width:768px) {
+    display: none;
+  }
+}
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 0px;
+  padding-bottom: 15px;
+
+  @media(min-width:768px) {
+    padding: 20px;
+  }
+}
+
+#web-header-wrapper {
+  @media(max-width:768px) {
+    display: none;
+  }
+}
+
+#mobile-header-wrapper {
+  height: 100px;
+  width: 100%;
+  z-index: 1000;
+  background: #000;
+
+  @media(min-width:768px) {
+    display: none;
+  }
+}

@@ -1,27 +1,15 @@
-<div class="container">
-  <div class="page-header">
-    <h1 id="title">ChickTech Portal</h1>
+<div id="wrapper">
+  <div id="sidebar-wrapper">
+    {{app-sidebar}}
   </div>
 
-  <div class="sidebar col-md-3">
-    <div class="current-projects">
-      <ul>
-        <li> Project 1 </li>
-        <li> Project 2 </li>
-        <li> Project 3 </li>
-      </ul>
-    </div>
-    <div>
-      <a {{action 'invalidateSession'}}>Logout</a>
-      Stuff
+  <div id="page-content-wrapper">
+    <div id="header-wrapper">
+      {{page-header}}
     </div>
 
-    <div>
-      Things
+    <div class="content">
+      {{outlet}}
     </div>
-  </div>
-
-  <div class="col-md-9">
-    {{outlet}}
   </div>
 </div>
