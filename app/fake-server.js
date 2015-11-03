@@ -154,12 +154,13 @@ function usersJson(){
         "id": "1",
         "type": "user",
         "attributes": {
+          "bio": "Hi! I'm a software engineer with Enova.",
+          "email": "abc@123.com",
           "first_name": "Jordan",
           "last_name": "VanderZwaag",
-          "roles": ["volunteer"],
-          "bio": "Hi! I'm a software engineer with Enova.",
+          "location": "Chicago",
           "phone_number": "612-123-1231",
-          "email": "abc@123.com"
+          "role": "volunteer"
         },
         "links": {
           "self": "/users/1"
