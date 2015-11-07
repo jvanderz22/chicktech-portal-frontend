@@ -9,5 +9,9 @@ export default DS.Model.extend({
   volunteersNeeded:     DS.attr(),
   volunteersRegistered: DS.attr(),
 
-  volunteers:           DS.hasMany('user')
+  volunteers:           DS.hasMany('user'),
+
+  isComplete: true,
+  isOngoing: true,
+  isFuture: false
 });

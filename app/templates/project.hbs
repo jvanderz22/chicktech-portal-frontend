@@ -23,12 +23,6 @@
   <span class="data-value">{{model.volunteersNeeded}}</span>
 </section>
 
-<section class="action-buttons">
-  <button {{action "volunteer"}} class="btn btn-warning">
-    Volunteer
-  </button>
-</section>
-
 <section class="current-volunteers">
   <div class="data-label">
     Volunteer List
@@ -36,3 +30,23 @@
 
   {{volunteer-list volunteers=model.volunteers}}
 </section>
+
+{{#if canVolunteer}}
+  <div class="agreement-script">
+    Consent Form
+  </div>
+
+  <div class="agreement-script">
+    Inclusion Policy
+  </div>
+
+  <div class="agreement-script">
+    Code of Conduct
+  </div>
+
+  <section class="action-buttons">
+    <button {{action "volunteer"}} class="btn btn-warning">
+      Volunteer
+    </button>
+  </section>
+{{/if}}

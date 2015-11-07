@@ -27,6 +27,10 @@ export default new Pretender(function(){
     var project = json.data.findBy('id', req.params.id);
     return jsonResponse({data: project});
   });
+  this.patch('/projects/:id', function(req){
+    //ehh close enough
+    return jsonResponse(JSON.parse(req.requestBody))
+  });
   this.get('/users/:id', function(req){
     var json = usersJson();
     var user = json.data.findBy('id', req.params.id);
@@ -85,6 +89,9 @@ function projectsJson(){
         },
         "relationships": {
           "volunteers": {
+            "links": {
+              "self": "/articles/1/relationships/volunteers"
+            },
             "data": [
               { "type": "user", "id": 1 },
               { "type": "user", "id": 2 }
