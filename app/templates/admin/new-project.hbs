@@ -1,1 +1,38 @@
-New Project
+
+<form class="form-vertical">
+  <fieldset>
+    <legend> New Project </legend>
+
+    {{#form-group label="Title"}}
+      {{input}}
+    {{/form-group}}
+
+    {{#form-group label="Project Coordinator"}}
+      {{input}}
+    {{/form-group}}
+
+    {{#form-group label="Description"}}
+      {{textarea
+        class="small-text"
+        cols=40
+        rows=10
+      }}
+    {{/form-group}}
+
+    {{#form-group label="Start Date"}}
+      {{input type="date"}}
+    {{/form-group}}
+
+    {{#form-group label="End Date"}}
+      {{input type="date"}}
+    {{/form-group}}
+
+    {{#form-group label="Volunteers Needed"}}
+      {{input type="number"}}
+    {{/form-group}}
+  </fieldset>
+
+  <button {{action 'submit'}} class="btn btn-primary" type="submit">
+    Submit
+  </button>
+</form>

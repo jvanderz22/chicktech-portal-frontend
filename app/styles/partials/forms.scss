@@ -1,0 +1,21 @@
+.small-text {
+  font-size: small;
+}
+
+.form-input {
+  max-width: 300px;
+  margin: 0px;
+}
+
+.form-vertical {
+  .form-group {
+    margin-bottom: 10px;
+  }
+}
+
+.form-horizontal {
+  .form-group {
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+}

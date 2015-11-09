@@ -1,13 +1,21 @@
 
 <div class="container">
-  <div class="buttons col-md-3">
-    {{#link-to "admin.new-project" tagName="button" classNames='btn btn-primary'}}
-      Create Project
-    {{/link-to}}
-    Add Volunteer
+  <div class="buttons col-md-2">
+    <ul class="nav nav-pills nav-stacked">
+      <li role="presentation" class={{if isProjectRouteActive 'active'}}>
+        {{#link-to "admin.new-project"}}
+          Create Project
+        {{/link-to}}
+      </li>
+      <li role="presentation">
+        <a>
+          Add Volunteer
+        </a>
+      </li>
+    </ul>
   </div>
 
-  <div class="col-md-9 outlet">
+  <div class="col-md-10 outlet">
     {{outlet}}
   </div>
 </div>
