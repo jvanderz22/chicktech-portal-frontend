@@ -13,7 +13,9 @@ Router.map(function() {
   this.route('projects');
   this.route('project', { path: 'projects/:project_id' });
   this.route('user', { path: 'users/:user_id' });
-  this.route('admin');
+  this.route('admin', function() {
+    this.route('new-project');
+  });
 });
 
 export default Router;

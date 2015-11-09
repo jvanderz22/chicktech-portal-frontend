@@ -1,4 +1,13 @@
-<div class="buttons">
-  Create Project
-  Add Volunteer
+
+<div class="container">
+  <div class="buttons col-md-3">
+    {{#link-to "admin.new-project" tagName="button" classNames='btn btn-primary'}}
+      Create Project
+    {{/link-to}}
+    Add Volunteer
+  </div>
+
+  <div class="col-md-9 outlet">
+    {{outlet}}
+  </div>
 </div>
