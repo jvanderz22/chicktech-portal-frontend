@@ -6,11 +6,12 @@ export default Base.extend({
   user: Ember.inject.service(),
 
   restore(data) {
-    var promise = this._loadSession();
-    promise.then(session => {
-      this._loadUser(session);
-    });
-    return promise;
+    var promises = {
+      session: this._loadSession().then(session => {
+        return this._loadUser(session);
+      })
+    }
+    return Ember.RSVP.hash(promises);
   },
   authenticate(options) {
     var promise = Ember.$.ajax('/sessions', {
