@@ -1,3 +1,5 @@
+import Pretender from 'pretender'
+
 function jsonResponse(json, status = 200) {
   return [status, {"Content-Type": "application/vnd.api+json"}, JSON.stringify(json)];
 }
@@ -21,6 +23,11 @@ export default new Pretender(function(){
   });
   this.get('/projects', function(){
     return jsonResponse(projectsJson());
+  });
+  this.post('/projects', function(req){
+    var requestBody = JSON.parse(req.requestBody);
+    requestBody.data.id = Math.floor((Math.random() * 100) + 10);
+    return jsonResponse(requestBody, 201)
   });
   this.get('/projects/:id', function(req){
     var json = projectsJson();
