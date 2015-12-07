@@ -4,15 +4,16 @@
     <legend> New Project </legend>
 
     {{#form-group label="Title"}}
-      {{input}}
+      {{input value=model.title}}
     {{/form-group}}
 
     {{#form-group label="Project Coordinator"}}
-      {{input}}
+      {{input value=model.projectCoordinator}}
     {{/form-group}}
 
     {{#form-group label="Description"}}
       {{textarea
+        value=model.description
         class="small-text"
         cols=40
         rows=10
@@ -20,15 +21,15 @@
     {{/form-group}}
 
     {{#form-group label="Start Date"}}
-      {{input type="date"}}
+      {{input value=model.startDate type="date"}}
     {{/form-group}}
 
     {{#form-group label="End Date"}}
-      {{input type="date"}}
+      {{input value=model.endDate type="date"}}
     {{/form-group}}
 
     {{#form-group label="Volunteers Needed"}}
-      {{input type="number"}}
+      {{input value=model.volunteersNeeded type="number"}}
     {{/form-group}}
   </fieldset>
 

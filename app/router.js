@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('user', { path: 'users/:user_id' });
   this.route('admin', function() {
     this.route('new-project');
+    this.route('create-event');
   });
 });
 
